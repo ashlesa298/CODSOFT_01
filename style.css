@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: #333;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #4b2c82;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+
+.navbar {
+  position: sticky;
+  top: 130px; 
+  background: #6a3ea1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  z-index: 998;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: #4b2c82;
+}
+
+
+section {
+  background: white;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  animation: popIn 1s ease;
+  transition: transform 0.3s;
+  margin-top: 120px; 
+}
+
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+h2 {
+  color: #4b2c82;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+
+img {
+  max-width: 30%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-photo {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  padding-left: 20px;
+  list-style: square;
+}
+
+.project {
+  margin-top: 20px;
+}
+
+a {
+  display: inline-block;
+  background: #4b2c82;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+a:hover {
+  background: #6a3ea1;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  section {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+}
